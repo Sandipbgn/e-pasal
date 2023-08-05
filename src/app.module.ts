@@ -6,6 +6,7 @@ import { Product } from './product/entities/product.entity';
 import { ProductModule } from './product/product.module';
 import { User } from './user/entities/user.entity';
 import { UserModule } from './user/user.module';
+import { UploadFileModule } from './upload-file/upload-file.module';
 
 @Module({
   imports: [
@@ -34,7 +35,9 @@ import { UserModule } from './user/user.module';
       synchronize: true,
       logging: true,
       ssl: true
-    })
+    }),
+
+    UploadFileModule
     ,],
   controllers: [AppController],
   providers: [AppService],
